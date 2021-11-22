@@ -325,7 +325,6 @@ class Redis extends Connector
      */
     protected function getQueue($queue)
     {
-        $queue = $queue ?: $this->default;
-        return "{queues:{$queue}}";
+        return $queue ?: $this->default;
     }
 }
